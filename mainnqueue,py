@@ -1,0 +1,37 @@
+class Queue:
+    def __init__(self):
+        self.queue = []
+    
+    def enqueue(self,item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop(0)
+    
+    def displayqueue(self):
+        print("The elements in the queue are",self.queue)
+    
+    def queuesize(self):
+        print("The size of thee queue is",len(self.queue))
+
+lunchqueue = Queue()
+
+print("Elements in the queue before dequeueing.")
+#objectname.functionname()
+lunchqueue.enqueue(13)
+lunchqueue.enqueue(52)
+lunchqueue.enqueue(63)
+lunchqueue.enqueue(45)
+lunchqueue.enqueue(86)
+
+lunchqueue.queuesize()
+lunchqueue.displayqueue()
+
+print("Elements in the queue after dequeueng")
+lunchqueue.dequeue()
+lunchqueue.dequeue()
+
+lunchqueue.queuesize()
+lunchqueue.displayqueue()
